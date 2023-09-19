@@ -1,0 +1,20 @@
+{
+  "name": "coronavirus-api-testing",
+  "version": "1.0.0",
+  "description": "Playwright UK Coronavirus Open Data API (APIv1) Testing Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "keywords": [
+    "playwright",
+    "javascript",
+    "UK Coronavirus Open Data API"
+  ],
+  "author": "Diego Soares",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.37.0",
+    "npm-check-updates": "^16.11.1"
+  }
+}

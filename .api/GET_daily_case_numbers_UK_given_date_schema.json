@@ -1,0 +1,117 @@
+{
+    "type": "object",
+    "required": [
+        "length",
+        "maxPageLimit",
+        "totalRecords",
+        "data",
+        "requestPayload",
+        "pagination"
+    ],
+    "properties": {
+        "length": {
+            "type": "integer"
+        },
+        "maxPageLimit": {
+            "type": "integer"
+        },
+        "totalRecords": {
+            "type": "integer"
+        },
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "date",
+                    "newCases"
+                ],
+                "properties": {
+                    "date": {
+                        "type": "string"
+                    },
+                    "newCases": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "requestPayload": {
+            "type": "object",
+            "required": [
+                "structure",
+                "filters",
+                "page"
+            ],
+            "properties": {
+                "structure": {
+                    "type": "object",
+                    "required": [
+                        "date",
+                        "newCases"
+                    ],
+                    "properties": {
+                        "date": {
+                            "type": "string"
+                        },
+                        "newCases": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "filters": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "identifier",
+                            "operator",
+                            "value"
+                        ],
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "operator": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "page": {
+                    "type": "integer"
+                }
+            }
+        },
+        "pagination": {
+            "type": "object",
+            "required": [
+                "current",
+                "next",
+                "previous",
+                "first",
+                "last"
+            ],
+            "properties": {
+                "current": {
+                    "type": "string"
+                },
+                "next": {
+                    "type": "null"
+                },
+                "previous": {
+                    "type": "null"
+                },
+                "first": {
+                    "type": "string"
+                },
+                "last": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
